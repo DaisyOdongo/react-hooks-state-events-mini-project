@@ -16,6 +16,9 @@ function NewTaskForm({categories,onTaskFormSubmit}) {
     e.preeventDefault()
     onTaskFormSubmit(formData)
   }
+
+  const selectOptions = [...categories]
+  selectOptions.shift()
   return (
     <form className="new-task-form" onSubmit={handleSubmit}>
       <label>
